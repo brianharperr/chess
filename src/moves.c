@@ -339,6 +339,27 @@ Piece get_piece_type(U64 square, Board *board)
     return Empty;
 }
 
+U64 *get_piece_bitboard(Board *board, Piece piece, Side side)
+{
+    switch (piece)
+    {
+    case Pawn:
+        return side == WHITE ? &board->wPawns : &board->bPawns;
+    case Knight:
+        return side == WHITE ? &board->wKnights : &board->bKnights;
+    case Bishop:
+        return side == WHITE ? &board->wBishops : &board->bBishops;
+    case Rook:
+        return side == WHITE ? &board->wRooks : &board->bRooks;
+    case Queen:
+        return side == WHITE ? &board->wQueens : &board->bQueens;
+    case King:
+        return side == WHITE ? &board->wKing : &board->bKing;
+    default:
+        return NULL; // Invalid piece type
+    }
+}
+
 int move(Game *game, U64 from, U64 to, Piece type)
 {
     int captured = 0;
