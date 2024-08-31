@@ -1,0 +1,20 @@
+{
+	"files.associations": {
+		"iostream": "c",
+		"main_window.h": "c",
+		"game.h": "c",
+		"xlocale": "c",
+		"compare": "c",
+		"format": "c",
+		"functional": "c",
+		"memory": "c",
+		"tuple": "c",
+		"type_traits": "c",
+		"utility": "c",
+		"xmemory": "c",
+		"xstring": "c",
+		"xtr1common": "c",
+		"xutility": "c",
+		"ios": "c"
+	}
+}
